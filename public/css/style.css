@@ -6,16 +6,15 @@
 }
 
 .container {
-  margin-top: 200px;
-  margin-inline: 200px;
-}
-
-.container h1 {
-  text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 30px;
 }
 
 form {
   border: black solid 1px;
+  width: 500px;
   padding-block: 15px;
   display: flex;
   flex-flow: column;
@@ -26,4 +25,10 @@ form {
 form > button {
   width: 100px;
   height: 40px;
+}
+
+form > .csv_export {
+  width: 150px;
+  height: 70px;
+  border-radius: 5px;
 }

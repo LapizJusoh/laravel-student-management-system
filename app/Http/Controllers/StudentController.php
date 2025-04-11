@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
-  public function create(Request $request) {
+  public function createStudent(Request $request) {
     $incomingFields = $request->validate([
       'name' => 'required',
       'email' => ['required','email']
