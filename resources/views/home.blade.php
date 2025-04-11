@@ -9,11 +9,11 @@
 <body>
   <div class="container">
     <h1>Welcome to the Student Management System!</h1>
-    
-    <form>
+    <form action="/create" method="POST">
+      @csrf
       <h2>Student Form</h2>
       <div>
-        <label for="student_name">Name:</label> <input name="student_name" type="text"/>
+        <label for="name">Name:</label> <input name="name" type="text"/>
       </div>
       <div>
         <label for="email">Email:</label> <input name="email" type="email"/>
