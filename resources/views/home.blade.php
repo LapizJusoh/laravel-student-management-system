@@ -9,13 +9,22 @@
 <body>
   <div class="container">
     <h1>Welcome to the Student Management System!</h1>
+    
     <form>
       <h2>Student Form</h2>
-      <label for="student_name">Name:</label>
-      <input name="student_name" type="text"/> <br />
-      <label for="email">Email:</label>
-      <input name="email" type="email"/> <br />
-      <button>Add student</button>
+      <div>
+        <label for="student_name">Name:</label> <input name="student_name" type="text"/>
+      </div>
+      <div>
+        <label for="email">Email:</label> <input name="email" type="email"/>
+      </div>
+      <button>Add Student</button>
+    </form>
+
+    <form>
+      <h2>Course Form</h2>
+      <label for="course_name">Name:</label> <input name="course_name" type="text"/>
+      <button>Add Course</button>
     </form>
   </div>
 </body>
