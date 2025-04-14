@@ -5,11 +5,21 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+h1 {
+  text-align: center;
+  margin-block: 30px;
+}
+
 .container {
+  display: flex;
+}
+
+.input {
   display: flex;
   flex-flow: column;
   align-items: center;
   gap: 30px;
+  flex:1;
 }
 
 form {
@@ -32,4 +42,8 @@ form > .csv_export {
   width: 150px;
   height: 70px;
   border-radius: 5px;
+}
+
+.output {
+  flex: 1;
 }

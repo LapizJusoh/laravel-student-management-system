@@ -6,14 +6,12 @@ use App\Http\Controllers\CourseController;
 use App\Http\Controllers\StudentController;
 
 Route::get('/', function () {
-    return view('home');
-});
-
-Route::get('/studentsView', function () {
 
     $students = DB::table('students')->select('id','name','email')->get();
-    return view('students',[
-        'students' => $students
+    $courses = DB::table('courses')->select('id','name')->get();
+    return view('home',[
+        'students' => $students,
+        'courses' => $courses
     ]);
 });
 
