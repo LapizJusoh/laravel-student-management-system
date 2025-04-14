@@ -9,8 +9,8 @@ class StudentController extends Controller
 {
   public function createStudent(Request $request) {
     $incomingFields = $request->validate([
-      'name' => 'required',
-      'email' => ['required','email']
+      'name' => ['required','min:3','max:50'],
+      'email' => ['required','email','min:3','max:50']
     ]);
 
     Student::create($incomingFields);

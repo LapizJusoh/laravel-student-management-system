@@ -9,7 +9,7 @@ class CourseController extends Controller
 {
   public function createCourse(Request $request) {
     $incomingFields = $request->validate([
-      'name' => 'required',
+      'name' => ['required','min:3','max:50']
     ]);
 
     Course::create($incomingFields);
