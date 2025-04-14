@@ -31,7 +31,7 @@
                 <button>Add Course</button>
             </form>
 
-            <form>
+            <form action="/createExamMark" method="POST">
                 <h2>Exam Marks Form</h2>
                 <label for="student_name">Student</label>
                 <select id="students" name="students">
@@ -57,19 +57,40 @@
         </div>
         <div class="output">
           <h1>Output Data</h1>
-          <h2>Students</h2>
+          <h2>Student(s)</h2>
           <ul class="student">
             @foreach ($students as $student)
-              <li>{{ $student->name }} <button>Edit</button> <button>Delete</button></li>
+              <li><div>{{ $student->name }}</div><a href="/editStudent/{{$student->id}}"><button>Edit</button></a> <a href="/deleteStudent/{{$student->id}}"><button>Delete</button></a></li>
+            @endforeach
+          </ul>
+          
+
+          <h2>Course(s)</h2>
+          <ul class="courses">
+            @foreach ($courses as $course)
+              <li><div>{{ $course->name }}</div> <a href="/editCourse/{{$course->id}}"><button href>Edit</button></a> <a href="/deleteCourse/{{$course->id}}"><button>Delete</button></a></li>
             @endforeach
           </ul>
 
-          <h2>Courses</h2>
-          <ul class="courses">
-            @foreach ($courses as $course)
-              <li>{{ $course->name }} <button>Edit</button> <button>Delete</button></li>
+          <h2>Exam Marks Table</h2>
+          <table>
+            <tr>
+              <th>Student</th>
+              <th>Course</th>
+              <th>Exam Mark</th>
+            </tr>
+            @foreach ($students as $student)
+              <tr>                    
+                <td rowspan="{{ $courses->count()}}">{{ $student->name }} </td>
+                @foreach ($courses as $course)
+                    <td>{{ $course->name }}</td>
+                    <td>To-Be-Updated</td>
+                  </tr></td>
+                @endforeach
+              </tr>
             @endforeach
-          </ul>
+          </table>
+
         </div>
     </div>
 </body>

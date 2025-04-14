@@ -13,6 +13,14 @@ class CourseController extends Controller
     ]);
 
     Course::create($incomingFields);
-    return 'New course has been posted!';
+    return redirect('/');
+  }
+
+  public function editCourse(Request $request) {
+    
+  }
+
+  public function deleteCourse(Request $request) {
+    
   }
 }

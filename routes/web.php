@@ -1,9 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\ExamMarkController;
 
 Route::get('/', function () {
 
@@ -16,4 +17,8 @@ Route::get('/', function () {
 });
 
 Route::post('/createStudent', [StudentController::class, 'createStudent']);
+Route::get('/editStudent/{student}', [StudentController::class, 'editStudent']);
+Route::put('/editStudent/{student}', [StudentController::class, 'updateStudent']);
+
 Route::post('/createCourse', [CourseController::class, 'createCourse']);
+Route::post('/createExamMark', [ExamMarkController::class, 'createExamMark']);

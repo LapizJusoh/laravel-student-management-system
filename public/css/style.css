@@ -47,3 +47,31 @@ form > .csv_export {
 .output {
   flex: 1;
 }
+
+.output ul li {
+  margin-block: 10px;
+}
+
+.output ul li div {
+  display: inline-block;
+  width: 120px;
+}
+
+.output button {
+  cursor: pointer;
+  width: 60px;
+  height: 30px;
+  margin-inline: 5px;
+}
+
+.output table {
+  border: 1px solid black;
+}
+
+.output table th,
+.output table td{
+  border: 1px solid black;
+  text-align: center;
+  width: 175px;
+  padding-block: 3px;
+}
