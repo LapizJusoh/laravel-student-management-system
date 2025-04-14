@@ -25,6 +25,7 @@ form {
 form > button {
   width: 100px;
   height: 40px;
+  cursor: pointer;
 }
 
 form > .csv_export {

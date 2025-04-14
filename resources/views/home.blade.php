@@ -28,7 +28,7 @@
       <button>Add Course</button>
     </form>
 
-    <form>
+    <form> 
       <h2>Exam Marks Form</h2>
       <label for="student_name">Student</label>
       <select id="students" name="students">
